@@ -10,12 +10,9 @@ class range_query_2d:
         for y in range(1, len(matrix) + 1):
             for x in range(1, len(matrix[0]) + 1):
                 cache[y][x] = matrix[y - 1][x - 1] + cache[y - 1][x] + cache[y][x - 1] - cache[y - 1][x - 1]
-
-    def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:
-
-        row1 += 1; col1 += 1; row2 +=1; col2 += 1
-
-        return self.cache[row2][col2] - self.cache[row2][col1 - 1] - self.cache[row1 - 1][col2] + self.cache[row1 - 1][col1 - 1]
+    
+    def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:        
+        return self.cache[row2 + 1][col2 + 1] - self.cache[row2 + 1][col1] - self.cache[row1][col2 + 1] + self.cache[row1][col1]
 
 
 matrix = [
