@@ -4,7 +4,7 @@ from typing import List
 
 def dungeon_game(dungeon : List[List[int]]) -> int:
 
-    dp = [[math.inf for x in range(len(dungeon[0]) + 1)] for y in range(len(dungeon) + 1)]
+    dp = [[math.inf for _ in range(len(dungeon[0]) + 1)] for _ in range(len(dungeon) + 1)]
     
     for y in range(len(dungeon) - 1, -1, -1):
         for x in range(len(dungeon[0]) - 1, -1, -1):
