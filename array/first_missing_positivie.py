@@ -12,7 +12,6 @@ def first_missing_positive(nums : List[int]) -> int:
         
         if pos_integer_index > len(nums) - 1:
             continue
-        
         if nums[pos_integer_index] is None or nums[pos_integer_index] == "FOUND":
             nums[pos_integer_index] = "FOUND"
         else:
@@ -24,12 +23,10 @@ def first_missing_positive(nums : List[int]) -> int:
             continue
         if nums[number - 1] is None or nums[number - 1] > 0:
             return number
-    
     return len(nums) + 1
-
+    
 nums = [7,8,9,11,12]
 nums2 = [3,4,-1,1]
 nums3 = [2, 0 ,1]
 nums4 = [1]
-
 print(first_missing_positive(nums3))
