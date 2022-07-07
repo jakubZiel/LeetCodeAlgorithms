@@ -8,7 +8,7 @@ def pick_fruits(fruits: List[int]) -> int:
     window_values = {}
     max_seq = -inf
 
-    while end < len(fruits)    :
+    while end < len(fruits):
         fruit = fruits[end]
 
         if fruit in window_values:
