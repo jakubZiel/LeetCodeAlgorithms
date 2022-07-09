@@ -8,13 +8,12 @@ def insert_interval(intervals: List[List[int]], new_interval: List[int]) -> List
 
         while curr_index < len(intervals):    
             curr_interval = intervals[curr_index]
-            
             if new_interval[1] < curr_interval[0] or new_interval[0] > curr_interval[1]:
                 break
+            
             new_interval = [min(new_interval[0], curr_interval[0]), max(new_interval[1], curr_interval[1])]
-
+            
             end = curr_index
-
             curr_index += 1
 
         return intervals[0:beg] + [new_interval] + intervals[end+1:len(intervals)]
