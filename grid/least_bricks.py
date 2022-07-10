@@ -33,4 +33,4 @@ wall = [
 ]
 
 
-print(brick_wall(wall))
+print(least_bricks(wall))
