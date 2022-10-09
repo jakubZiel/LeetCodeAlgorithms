@@ -44,6 +44,7 @@ def count_vowel_permutation_dp(n: int) -> int:
             dp[i][vowel] = value
 
     return sum([dp[n - 1][vowel] for vowel in list('aeiou')]) % (1_000_000_000 + 7)
+    
 n = 5
 print(count_vowel_permutation_dp(n))
 0
