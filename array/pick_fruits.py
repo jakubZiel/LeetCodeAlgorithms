@@ -10,9 +10,9 @@ def pick_fruits(fruits: List[int]) -> int:
 
     while end < len(fruits):
         fruit = fruits[end]
-
+ 
         if fruit in window_values:
-            window_values[fruit] += 1
+            window_values[fruit] += 1  
             total += 1
             max_seq = max(max_seq, total)
             end += 1
@@ -23,7 +23,7 @@ def pick_fruits(fruits: List[int]) -> int:
                     window_values[fruit] -= 1
                     total -= 1
 
-                    if window_values[fruit] == 0:
+                    if window_values[fruit] ==                                                                                                                                 0:
                         del window_values[fruit]
                     beg += 1
             else:
@@ -36,4 +36,4 @@ def pick_fruits(fruits: List[int]) -> int:
 
 fruits = [1,2,3,2,2]
 
-print(pick_fruits(fruits))
+print(pick_fruits(fruits))                              
